@@ -4,9 +4,9 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @atricle = Article.new atricle_params
-    if @atricle.valid?
-      @atricle.save
+    @article = Article.new article_params
+    if @article.valid?
+      @article.save
     else
       render action: 'new'
     end
@@ -14,7 +14,7 @@ class ArticlesController < ApplicationController
 
   private
 
-  def atricle_params # allowing attributes from params[]
+  def article_params # allowing attributes from params[]
     params.require(:article).permit(:title, :text)
   end
 
