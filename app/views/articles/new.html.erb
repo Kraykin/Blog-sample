@@ -2,6 +2,16 @@
 
 <%= form_for :article, url: '/articles' do |f| %>
 
+	<% if @article && @article.errors.any? %>
+		<p>
+			<ul>
+				<% @article.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</p>
+	<% end %>
+
 	<p>
 		<%= f.label :title %><br />
 		<%= f.text_field :title %>
