@@ -28,7 +28,7 @@
 
 <% end %>
 
-<%= form_for :article, url: article_path(@article), method: :delete do |f| %>
+<%= form_for :article, url: article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } do |f| %>
 
 	<p>
 		<%= f.submit 'Delete article' %>
