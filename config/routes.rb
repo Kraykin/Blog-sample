@@ -5,7 +5,6 @@ Rails.application.routes.draw do
 
   resource :contacts, only: [:new, :create], path_names: { :new => '' }
   resource :terms, only: [:show], path_names: { :show => '' }
-  resource :about, only: [:show], path_names: { :show => '' }
   resources :articles
   
   # The priority is based upon order of creation: first created -> highest priority.
