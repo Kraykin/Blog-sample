@@ -27,3 +27,11 @@
 	</p>
 
 <% end %>
+
+<%= form_for :article, url: article_path(@article), method: :delete do |f| %>
+
+	<p>
+		<%= f.submit 'Delete article' %>
+	</p>
+
+<% end %>

@@ -35,7 +35,8 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-
+    @article = Article.destroy(params[:id])
+    render action: 'delete'
   end
 
   private
