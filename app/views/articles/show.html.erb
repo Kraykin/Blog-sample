@@ -2,4 +2,26 @@
 
 <p><%= @article.text %></p>
 
-<%= link_to 'Show all articles', articles_path %>
+<p>
+	<%= form_for([@article, @article.comments.build]) do |f| %>
+
+		<p>
+			<%= f.label :author %><br />
+			<%= f.text_field :author %>
+		</p>
+
+		<p>
+			<%= f.label :body %><br />
+			<%= f.text_area :body %>
+		</p>
+
+		<p>
+			<%= f.submit %>
+		</p>
+
+	<% end %>
+</p>
+
+<p>
+	<%= link_to 'Show all articles', articles_path %>
+</p>
