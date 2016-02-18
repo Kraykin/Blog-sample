@@ -46,3 +46,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
+gem "bcrypt-ruby", '~> 3.0.1' # need to bugfix error with bcrypt_ext in windows
