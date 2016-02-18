@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  
+  root to: "home#index"
+
   get 'home/index'
-  get '/' => 'articles#index'
+  
   get 'payment' => 'pages#payment'
   get 'about' => 'pages#about'
 
