@@ -12,18 +12,31 @@
 </head>
 <body>
 <div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+		
+			<% if user_signed_in? %>
+				Hello, <%= current_user.username %> | <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+			<% else %>
+				<%= link_to 'Sign In', new_user_session_path %>
+			<% end %>
 
-<% if user_signed_in? %>
-	Hello, <%= current_user.username %> | <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-<% else %>
-	<%= link_to 'Sign In', new_user_session_path %>
-<% end %>
+			<%if alert && alert.length > 0 then %>
+				<div class="alert alert-danger"><%= alert %></div>
+			<% end %>
+			
+			<%if notice && notice.length > 0 then %>
+				<div class="alert alert-success"><%= notice %></div>
+			<% end %>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+		</div>
+	</div><!-- /.row -->
+	
+	<div class="row">
 
-<%= yield %>
+		<%= yield %>
 
+	</div><!-- /.row -->
 </div><!-- /.container -->
 </body>
 </html>
