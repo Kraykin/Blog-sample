@@ -1,19 +1,21 @@
-<% @articles.each do |article| %>
-	
-	<h3>
-		<%= article.title %>
-	</h3>
-	
-	<p>
-		<%= article.text %>
-	</p>
-	
-	<p>
-		<%= link_to 'Show', article_path(article) %> |
-		<%= link_to 'Edit', edit_article_path(article) %> |
-		<%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: 'Are you sure?' } %>
-	</p>
-	
-	<hr />
+<div class="col-xs-12">
+	<% @articles.each do |article| %>
+		
+		<h3>
+			<%= article.title %>
+		</h3>
+		
+		<p>
+			<%= article.text %>
+		</p>
+		
+		<p>
+			<%= link_to 'Show', article_path(article) %> |
+			<%= link_to 'Edit', edit_article_path(article) %> |
+			<%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: 'Are you sure?' } %>
+		</p>
+		
+		<hr />
 
-<% end %>
+	<% end %>
+</div>
