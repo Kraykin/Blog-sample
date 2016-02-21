@@ -35,14 +35,13 @@
             <li><%= link_to 'All articles', articles_path %></li>
             <li><%= link_to 'New article', new_article_path %></li>
             <li><%= link_to 'Terms', terms_path %></li>
-            <li><%= link_to 'Contact Us', new_contacts_path %></li>
+            <li><%= link_to 'Contact us', new_contacts_path %></li>
             <li><%= link_to 'About', about_path %></li>
           </ul>
           
           <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
               <li><p class="navbar-text">Hello, <%= current_user.username %></p></li>
-              <li role="separator" class="divider"></li>
               <li><%= link_to 'Exit', destroy_user_session_path, method: :delete %></li>
             <% else %>
               <li><%= link_to 'Sign in', new_user_session_path %></li>
