@@ -1,29 +1,31 @@
-<h2>New article</h2>
+<div class="col-xs-12">
+	<h2>New article</h2>
 
-<%= form_for :article, url: '/articles' do |f| %>
+	<%= form_for :article, url: '/articles' do |f| %>
 
-	<% if @article && @article.errors.any? %>
+		<% if @article && @article.errors.any? %>
+			<p>
+				<ul>
+					<% @article.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					<% end %>
+				</ul>
+			</p>
+		<% end %>
+
 		<p>
-			<ul>
-				<% @article.errors.full_messages.each do |msg| %>
-					<li><%= msg %></li>
-				<% end %>
-			</ul>
+			<%= f.label :title %><br />
+			<%= f.text_field :title %>
 		</p>
+
+		<p>
+			<%= f.label :text %><br />
+			<%= f.text_area :text %>
+		</p>
+
+		<p>
+			<%= f.submit %>
+		</p>
+
 	<% end %>
-
-	<p>
-		<%= f.label :title %><br />
-		<%= f.text_field :title %>
-	</p>
-
-	<p>
-		<%= f.label :text %><br />
-		<%= f.text_area :text %>
-	</p>
-
-	<p>
-		<%= f.submit %>
-	</p>
-
-<% end %>
+</div>

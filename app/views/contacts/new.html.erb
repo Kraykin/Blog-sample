@@ -1,29 +1,31 @@
-<h2>Contact us</h2>
+<div class="col-xs-12">
+	<h2>Contact us</h2>
 
-<%= form_for :contact, url: contacts_path do |f| %>
+	<%= form_for :contact, url: contacts_path do |f| %>
 
-	<% if @contact && @contact.errors.any? %>
+		<% if @contact && @contact.errors.any? %>
+			<p>
+				<ul>
+					<% @contact.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					<% end %>
+				</ul>
+			</p>
+		<% end %>
+
 		<p>
-			<ul>
-				<% @contact.errors.full_messages.each do |msg| %>
-					<li><%= msg %></li>
-				<% end %>
-			</ul>
+			<%= f.label :email %><br />
+			<%= f.text_field :email %>
 		</p>
+
+		<p>
+			<%= f.label :message %><br />
+			<%= f.text_area :message %>
+		</p>
+
+		<p>
+			<%= f.submit 'Send message' %>
+		</p>
+
 	<% end %>
-
-	<p>
-		<%= f.label :email %><br />
-		<%= f.text_field :email %>
-	</p>
-
-	<p>
-		<%= f.label :message %><br />
-		<%= f.text_area :message %>
-	</p>
-
-	<p>
-		<%= f.submit 'Send message' %>
-	</p>
-
-<% end %>
+</div>
