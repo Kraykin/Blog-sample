@@ -28,7 +28,9 @@
           </button>
           <a class="navbar-brand" href="/">BlogSample</a>
         </div>
+        
         <div class="navbar-collapse collapse">
+          
           <ul class="nav navbar-nav">
             <li><%= link_to 'All articles', articles_path %></li>
             <li><%= link_to 'New article', new_article_path %></li>
@@ -36,14 +38,19 @@
             <li><%= link_to 'Contact Us', new_contacts_path %></li>
             <li><%= link_to 'About', about_path %></li>
           </ul>
+          
+          <ul class="nav navbar-nav navbar-right">
+            <% if user_signed_in? %>
+              <li><p class="navbar-text">Hello, <%= current_user.username %></p></li>
+              <li role="separator" class="divider"></li>
+              <li><%= link_to 'Exit', destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to 'Sign in', new_user_session_path %></li>
+            <% end %>
+          </ul>
+
         </div><!--/.nav-collapse -->
       </nav>
-
-			<% if user_signed_in? %>
-				Hello, <%= current_user.username %> | <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-			<% else %>
-				<%= link_to 'Sign In', new_user_session_path %>
-			<% end %>
 
 			<%if alert && alert.length > 0 then %>
 				<div class="alert alert-danger"><%= alert %></div>
