@@ -23,5 +23,7 @@ en:
   hello: "Hello world"
 
   contacts:
-    contact_us: "Contact us"
+    subject: "Contact us"
     message: "Message"
+  new_article:
+    subject: "New article"
