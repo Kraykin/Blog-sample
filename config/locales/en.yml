@@ -27,3 +27,5 @@ en:
     message: "Message"
   new_article:
     subject: "New article"
+  edit_article:
+    subject: "Edit article"
