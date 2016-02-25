@@ -29,3 +29,6 @@ en:
     subject: "New article"
   edit_article:
     subject: "Edit article"
+  show_article:
+    comments: "Comments:"
+    add_comment: "Add comments:"
