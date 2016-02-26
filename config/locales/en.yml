@@ -32,3 +32,5 @@ en:
   show_article:
     comments: "Comments:"
     add_comment: "Add comments:"
+  delete_article:
+    subject: "Article deleted."
