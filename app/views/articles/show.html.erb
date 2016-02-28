@@ -11,6 +11,8 @@
 			<%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } %>
 		<% end %>
 	</p>
+	<br />
+	<span style="font-size: 75%; color: #999">Created at <%= @article.created_at %></span>
 
 	<h3><%= t('show_article.comments') %></h3>
 
