@@ -2,7 +2,7 @@
 	<% @articles.each do |article| %>
 		<div class="well">
 
-			<h3><%= article.title %></h3>
+			<h3><%= link_to article.title, article_path(article) %></h3>
 					
 			<br />
 			<p>
