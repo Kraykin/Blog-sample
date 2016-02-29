@@ -54,4 +54,5 @@ group :test, :development do
   gem 'shoulda-matchers'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'database_cleaner'
+  gem 'rails-erd'
 end
