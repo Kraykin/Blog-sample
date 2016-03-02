@@ -26,15 +26,15 @@
 			</p>
 
 			<p>
-				<%= f.submit 'Save article' %>
+				<%= f.submit t('edit_article.btn_save') %>
 			</p>
 
 		<% end %>
 
-		<%= form_for :article, url: article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } do |f| %>
+		<%= form_for :article, url: article_path(@article), method: :delete, data: { confirm: t('edit_article.confirm_del') } do |f| %>
 
 			<p>
-				<%= f.submit 'Delete article' %>
+				<%= f.submit t('edit_article.btn_delete') %>
 			</p>
 
 		<% end %>

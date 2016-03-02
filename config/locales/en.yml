@@ -29,6 +29,9 @@ en:
     subject: "New article"
   edit_article:
     subject: "Edit article"
+    btn_save: "Save article"
+    btn_delete: "Delete article"
+    confirm_del: "Are you sure?"
   show_article:
     comments: "Comments:"
     add_comment: "Add comments:"
