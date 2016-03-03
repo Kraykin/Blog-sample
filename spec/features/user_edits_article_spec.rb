@@ -4,7 +4,7 @@ feature "Article Editing" do
   before(:each) do
     sign_up
     new_article
-    click_link 'Edit'
+    click_link 'edit'
   end
 
   scenario "allows user to visit edit article page" do
