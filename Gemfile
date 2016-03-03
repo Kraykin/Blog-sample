@@ -49,7 +49,7 @@ gem 'devise'
 gem "bcrypt-ruby", '~> 3.0.1' # need to bugfix error with bcrypt_ext in windows
 
 group :test, :development do
-  gem 'rspec-rails', '~> 2.4'
+  gem 'rspec-rails'
   gem 'capybara'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails', '~> 4.0'
