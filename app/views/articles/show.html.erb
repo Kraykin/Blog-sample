@@ -7,13 +7,13 @@
 		<br />
 		<span style="font-size: 75%; color: #999">Created at <%= @article.created_at %>.
 		<% if if user_signed_in? then @article.author_id == current_user.id end %>You can 
-				<%= link_to 'edit', edit_article_path(@article) %> or
-				<%= link_to 'delete', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } %> it.
+				<%= link_to t('edit_article.link_edit'), edit_article_path(@article) %> or
+				<%= link_to t('edit_article.link_delete'), article_path(@article), method: :delete, data: { confirm: t('edit_article.confirm_del') } %> it.
 			<% end %>
 		</span>
 	</div>
 	<div class="well">
-		<h3><%= t('show_article.comments') %></h3>
+		<h3><%= t('comments.subject') %></h3>
 
 		<% @article.comments.each do |comment|  %>
 
@@ -24,14 +24,11 @@
 
 		<% end %>
 
-
-		<h3><%= t('show_article.add_comment') %></h3>
-
 		<p>
 			<%= form_for([@article, @article.comments.build]) do |f| %>
 
 				<p>
-					<%= f.label :body %><br />
+					<%= f.label t('comments.add_comment') %><br />
 					<%= f.text_area :body %>
 				</p>
 

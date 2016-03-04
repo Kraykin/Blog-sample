@@ -31,9 +31,9 @@ en:
     subject: "Edit article"
     btn_save: "Save article"
     btn_delete: "Delete article"
+    link_edit: "edit"
+    link_delete: "delete"
     confirm_del: "Are you sure?"
-  show_article:
-    comments: "Comments:"
+  comments:
+    subject: "Comments:"
     add_comment: "Add comments:"
-  delete_article:
-    subject: "Article deleted."
