@@ -20,8 +20,6 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
-
   contacts:
     subject: "Contact us"
     message: "Message"
@@ -31,6 +29,7 @@ en:
     subject: "Edit article"
     btn_save: "Save article"
     btn_delete: "Delete article"
+    created_at: "Created at"
     you_can: "You can"
     link_edit: "edit"
     or: "or"

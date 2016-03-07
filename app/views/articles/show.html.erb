@@ -5,7 +5,9 @@
 		<p><%= @article.text %></p>
 
 		<br />
-		<span style="font-size: 75%; color: #999">Created at <%= @article.created_at %>.
+		<span style="font-size: 75%; color: #999">
+			<%= t('edit_article.created_at')  %> 
+			<%= @article.created_at %>.
 			<% if if user_signed_in? then @article.author_id == current_user.id end %>
 				<%= t('edit_article.you_can') %>
 				<%= link_to t('edit_article.link_edit'), edit_article_path(@article) %>
