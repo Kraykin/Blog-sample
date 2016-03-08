@@ -36,6 +36,7 @@ en:
     link_delete: "delete"
     it: "it."
     confirm_del: "Are you sure?"
+    access_d: "ACCESS DENIED"
   comments:
     subject: "Comments:"
     add_comment: "Add comments:"
