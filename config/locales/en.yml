@@ -25,6 +25,7 @@ en:
     message: "Message"
   new_article:
     subject: "New article"
+    btn_new: "Create article"
   edit_article:
     subject: "Edit article"
     btn_save: "Save article"
