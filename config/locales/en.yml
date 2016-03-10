@@ -20,6 +20,14 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  navbar:
+    site_name: "BlogSample"
+    all_articles: "All articles"
+    new_article: "New article"
+    terms: "Terms"
+    payment: "Payment"
+    contact_us: "Contact us"
+    about: "About"
   contacts:
     subject: "Contact us"
     message: "Message"

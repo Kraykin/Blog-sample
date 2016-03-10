@@ -21,23 +21,23 @@
       <nav class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">BlogSample</span>
+            <span class="sr-only"><%= t('navbar.site_name')  %></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">BlogSample</a>
+          <a class="navbar-brand" href="/"><%= t('navbar.site_name')  %></a>
         </div>
         
         <div class="navbar-collapse collapse">
           
           <ul class="nav navbar-nav">
-            <li><%= link_to 'All articles', articles_path %></li>
-            <li><%= link_to 'New article', new_article_path %></li>
-            <li><%= link_to 'Terms', terms_path %></li>
-            <li><%= link_to 'Payment', payment_path %></li>
-            <li><%= link_to 'Contact us', new_contacts_path %></li>
-            <li><%= link_to 'About', about_path %></li>
+            <li><%= link_to t('navbar.all_articles'), articles_path %></li>
+            <li><%= link_to t('navbar.new_article'), new_article_path %></li>
+            <li><%= link_to t('navbar.terms'), terms_path %></li>
+            <li><%= link_to t('navbar.payment'), payment_path %></li>
+            <li><%= link_to t('navbar.contact_us'), new_contacts_path %></li>
+            <li><%= link_to t('navbar.about'), about_path %></li>
           </ul>
           
           <ul class="nav navbar-nav navbar-right">
