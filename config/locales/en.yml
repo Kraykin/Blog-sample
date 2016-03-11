@@ -28,6 +28,10 @@ en:
     payment: "Payment"
     contact_us: "Contact us"
     about: "About"
+    hello: "Hello, "
+    exit: "Exit"
+    sign_in: "Sign in"
+    sign_up: "Sign up"
   contacts:
     subject: "Contact us"
     message: "Message"

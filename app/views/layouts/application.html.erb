@@ -42,11 +42,11 @@
           
           <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
-              <li><p class="navbar-text">Hello, <%= current_user.username %></p></li>
-              <li><%= link_to 'Exit', destroy_user_session_path, method: :delete %></li>
+              <li><p class="navbar-text"><%= t('navbar.hello') %><%= current_user.username %></p></li>
+              <li><%= link_to t('navbar.exit'), destroy_user_session_path, method: :delete %></li>
             <% else %>
-              <li><%= link_to 'Sign in', new_user_session_path %></li>
-              <li><%= link_to 'Sign up', new_user_registration_path %></li>
+              <li><%= link_to t('navbar.sign_in'), new_user_session_path %></li>
+              <li><%= link_to t('navbar.sign_up'), new_user_registration_path %></li>
             <% end %>
           </ul>
 
