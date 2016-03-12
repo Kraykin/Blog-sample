@@ -34,7 +34,9 @@ en:
     sign_up: "Sign up"
   contacts:
     subject: "Contact us"
+    email: "Email"
     message: "Message"
+    btn_send: "Send message"
   new_article:
     subject: "New article"
     btn_new: "Create article"
