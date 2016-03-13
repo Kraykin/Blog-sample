@@ -37,6 +37,7 @@ en:
     email: "Email"
     message: "Message"
     btn_send: "Send message"
+    thanks: "Thanks!"
   new_article:
     subject: "New article"
     btn_new: "Create article"
