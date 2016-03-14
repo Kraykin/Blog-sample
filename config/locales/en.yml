@@ -57,3 +57,9 @@ en:
     subject: "Comments:"
     add_comment: "Add comments:"
     create_comment: "Create comment"
+  payment:
+    subject: "Payment Information"
+  about:
+    subject: "About us"
+  terms:
+    subject: "Terms of use"
