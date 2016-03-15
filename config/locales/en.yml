@@ -40,6 +40,8 @@ en:
     thanks: "Thanks!"
   new_article:
     subject: "New article"
+    title: "Title"
+    text: "Text"
     btn_new: "Create article"
   edit_article:
     subject: "Edit article"
