@@ -1,0 +1,56 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  navbar:
+    site_name: "BlogSample"
+    all_articles: "Все статьи"
+    new_article: "Новая статья"
+    terms: "Правила"
+    payment: "Оплата"
+    contact_us: "Контакты"
+    about: "О нас"
+    hello: "Привет, "
+    exit: "Exit"
+    sign_in: "Sign in"
+    sign_up: "Sign up"
+  contacts:
+    subject: "Contact us"
+    message: "Message"
+  new_article:
+    subject: "New article"
+    btn_new: "Create article"
+  edit_article:
+    subject: "Edit article"
+    btn_save: "Save article"
+    btn_delete: "Delete article"
+    created_at: "Created at"
+    you_can: "You can"
+    link_edit: "edit"
+    or: "or"
+    link_delete: "delete"
+    it: "it."
+    confirm_del: "Are you sure?"
+    access_d: "ACCESS DENIED"
+  comments:
+    subject: "Comments:"
+    add_comment: "Add comments:"
+    create_comment: "Create comment"
