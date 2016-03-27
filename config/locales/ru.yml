@@ -19,7 +19,7 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
+ru:
   navbar:
     site_name: "Блог-пример"
     all_articles: "Все статьи"
@@ -34,9 +34,14 @@ en:
     sign_up: "Зарегистироваться"
   contacts:
     subject: "Связаться с нами"
+    email: "Email"
     message: "Сообщение"
+    btn_send: "Отправить сообщение"
+    thanks: "Спасибо!"
   new_article:
     subject: "Новая статья"
+    title: "Заголовок"
+    text: "Текст"
     btn_new: "Создать статью"
   edit_article:
     subject: "Редактирование статью"
@@ -54,3 +59,9 @@ en:
     subject: "Комментарии:"
     add_comment: "Написать комментарий:"
     create_comment: "Создать комментарий"
+  payment:
+    subject: "Информация о оплате"
+  about:
+    subject: "О нас"
+  terms:
+    subject: "Правила"
