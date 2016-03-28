@@ -1,19 +1,22 @@
 Rails.application.routes.draw do
   
   devise_for :users
-  root to: "home#index"
 
-  get 'home/index'
-  
-  get 'payment' => 'pages#payment'
-  get 'about' => 'pages#about'
 
-  resource :contacts, only: [:new, :create], path_names: { :new => '' }
-  resource :terms, only: [:show], path_names: { :show => '' }
-  resources :articles do
-    resources :comments
-  end
-  
+  scope "(/:locale)" do
+    get 'payment' => 'pages#payment'
+    get 'about' => 'pages#about'  
+
+    resource :terms, only: [:show], path_names: { :show => '' }
+    resources :articles do
+      resources :comments
+    end
+
+    resource :contacts, only: [:new, :create], path_names: { :new => '' }
+    root to: "home#index"
+    get '/:locale' => 'home#index'
+  end  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
