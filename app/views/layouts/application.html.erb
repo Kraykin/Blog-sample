@@ -26,7 +26,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/"><%= t('navbar.site_name')  %></a>
+          <%= link_to t('navbar.site_name'), root_path, class: "navbar-brand" %>
         </div>
         
         <div class="navbar-collapse collapse">
@@ -42,7 +42,7 @@
           
           <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
-              <li><p class="navbar-text"><%= t('navbar.hello') %><%= current_user.username %></p></li>
+              <li><p class="navbar-text"><%= t('navbar.hello', username: current_user.username) %></p></li>
               <li><%= link_to t('navbar.exit'), destroy_user_session_path, method: :delete %></li>
             <% else %>
               <li><%= link_to t('navbar.sign_in'), new_user_session_path %></li>

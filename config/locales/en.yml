@@ -28,7 +28,7 @@ en:
     payment: "Payment"
     contact_us: "Contact us"
     about: "About"
-    hello: "Hello, "
+    hello: "Hello, %{username}!"
     exit: "Exit"
     sign_in: "Sign in"
     sign_up: "Sign up"

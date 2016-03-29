@@ -28,7 +28,7 @@ ru:
     payment: "Оплата"
     contact_us: "Контакты"
     about: "О нас"
-    hello: "Привет, "
+    hello: "Привет, %{username}!"
     exit: "Выйти"
     sign_in: "Войти"
     sign_up: "Зарегистироваться"
