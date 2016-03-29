@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
 
 
-  scope "(/:locale)" do
+  scope "(/:locale)", locale: /en|ru/ do
     get 'payment' => 'pages#payment'
     get 'about' => 'pages#about'  
 
@@ -13,9 +13,10 @@ Rails.application.routes.draw do
     end
 
     resource :contacts, only: [:new, :create], path_names: { :new => '' }
-    root to: "home#index"
-    get '/:locale' => 'home#index'
   end  
+  
+  get '/:locale' => 'home#index', :as => 'locale_root'
+  root to: "home#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
