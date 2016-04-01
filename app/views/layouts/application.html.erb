@@ -39,8 +39,10 @@
             <li><%= link_to t('navbar.contact_us'), new_contacts_path %></li>
             <li><%= link_to t('navbar.about'), about_path %></li>
           </ul>
-          
+<% #Если ваше приложение включает меню переключения локали, вам следует иметь что-то вроде этого в нем:
+#link_to("Русский", "#{APP_CONFIG[:deutsch_website_url]}#{request.env['PATH_INFO']}") %>          
           <ul class="nav navbar-nav navbar-right">
+              <li></li>
             <% if user_signed_in? %>
               <li><p class="navbar-text"><%= t('navbar.hello', username: current_user.username) %></p></li>
               <li><%= link_to t('navbar.exit'), destroy_user_session_path, method: :delete %></li>
