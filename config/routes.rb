@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  
-  devise_for :users
-
 
   scope "(/:locale)", locale: /en|ru/ do
+    devise_for :users
+
     get 'payment' => 'pages#payment'
     get 'about' => 'pages#about'  
 
